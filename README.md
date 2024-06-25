@@ -16,10 +16,8 @@
 - **HTML5**
 - **CSS3**
 - **JavaScript (ES6+)**
-- **React**
-- **Angular**
-- **Bootstrap**
-- **Sass**
+- **Astro**
+- **Tailwind**
 
 ## Actividades y Cambios Pendientes
 
@@ -32,7 +30,7 @@ Aquí iré incluyendo las actividades o cambios que voy realizando en el portafo
 
 ### Tareas Pendientes
 
-- [ ] 
+- [✔] Incluir un favicon con respetivo screen-dark.
 
 ---
 
