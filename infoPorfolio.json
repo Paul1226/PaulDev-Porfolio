@@ -1,0 +1,66 @@
+{
+    "personal": {
+      "nombre": "Paul",
+      "apellido": "Dev",
+      "titulo": "Desarrollador Frontend",
+      "resumen": "Mi nombre es Paúl Esteban y aspiro al reconocimiento como PaulDev en el mundo de la programación, donde mi interés surgió al estudiar máquinas de control numérico computarizado (CNC) y diseño digital, llevándome a estudiar Desarrollo Full-Stack en la Academia ConquerBlocks para dominar frontend y backend de manera integral.",
+      "email": "paulguachichullca@gmail.com",
+      "telefono": "+593 98 0958291",
+      "website": "https://tunombre.com",
+      "ubicacion": "Cuenca, Ecuador",
+      "githubUrl": "https://github.com/Paul1226",
+      "linkedinUrl": "https://www.linkedin.com/in/paul-guachichullca-2287602b1/"
+    },
+    "experiencia": [
+      {
+        "puesto": "Académia ConquerBlocks",
+        "empresa": "Desarrollador Full-Stack",
+        "inicio": "2023",
+        "fin": "Actual",
+        "descripcion": "Actualmente, profundizo mis conocimientos para convertirme en un Desarrollador Full-Stack capacitado, abordando proyectos de forma integral, desde el frontend con React o Angular, hasta el backend con Node.js o Django, brindando soluciones completas y de alta calidad."
+      },
+      {
+        "puesto": "Muebleria JyB",
+        "empresa": "Diseñador y creador de mobiliario",
+        "inicio": "2020",
+        "fin": "2023",
+        "descripcion": "Dentro de la empresa hice los planos de algunos de los mobiliarios que ellos ofrecían a sus clientes. En algunos de los planos incluía algunos renders para facilitar la visualización de los mismos."
+      }
+    ],
+    "educacion": [
+      {
+        "institucion": "Academia ConquerBlocks",
+        "titulo": "Desarrollador Full-Stack",
+        "inicio": "2023",
+        "fin": "Actual",
+        "descripcion": "Actualmente, profundizo mis conocimientos para convertirme en un Desarrollador Full-Stack capacitado, abordando proyectos de forma integral, desde el frontend con React o Angular, hasta el backend con Node.js o Django, brindando soluciones completas y de alta calidad."
+      }
+    ],
+    "habilidades": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Astro",
+      "Git",
+      "Github",
+      "MySQL",
+      "Tailwind",
+      "SASS"
+    ],
+    "proyectos": [
+      {
+        "nombre": "Nombre del proyecto",
+        "descripcion": "Breve descripción del proyecto.",
+        "tecnologias": ["React", "Node.js", "MongoDB"],
+        "url": "https://proyecto.com",
+        "repositorio": "https://github.com/tunombre/proyecto"
+      },
+      {
+        "nombre": "Otro proyecto",
+        "descripcion": "Descripción de otro proyecto.",
+        "tecnologias": ["HTML", "CSS", "JavaScript"],
+        "url": "https://otroproyecto.com",
+        "repositorio": "https://github.com/tunombre/otroproyecto"
+      }
+    ]
+  }
