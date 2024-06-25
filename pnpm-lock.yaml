@@ -14,6 +14,9 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.11.1(typescript@5.5.2))(tailwindcss@3.4.4)
+      '@fontsource-variable/manrope':
+        specifier: ^5.0.20
+        version: 5.0.20
       astro:
         specifier: ^4.10.2
         version: 4.11.1(typescript@5.5.2)
@@ -343,6 +346,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/manrope@5.0.20':
+    resolution: {integrity: sha512-LKL0aM0DxYj8i/zUTb5Nru0mS3YoezPZaeWY7aIxEKVX1xVBLpPHlFq0NoK2iUXhL6HoD0XMYwc6KVa8I/ayKg==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -2424,6 +2430,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource-variable/manrope@5.0.20': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
