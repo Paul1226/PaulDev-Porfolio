@@ -7,8 +7,22 @@ const { titulo, url } = Astro.props
 ---
 
 <li class="">
-    <a href={url} class="flex flex-col justify-center items-center w-full [aspect-ratio:1/1] bg-chill-400/20 rounded-lg gap-1 p-1">
+    <a href={url} class="flex flex-col justify-center items-center w-full [aspect-ratio:1/1] rounded-lg gap-1 p-1 hover:bg-chill-400/10 transition-colors duration-300 link">
         <slot name="icon" />
-        <span class="leading-[10px] capitalize text-xs">{titulo}</span>
+        <span class="leading-[10px] capitalize text-[10px]">{titulo}</span>
     </a>
 </li>
+<style>
+    a.active{
+        @apply bg-chill-700 ;
+
+        svg{
+            @apply fill-chill-50 stroke-chill-50;
+        }
+    }
+</style>
+
+<script>
+    const $primerLink:HTMLAnchorElement |null = document.querySelector('.link');
+    $primerLink?.classList.add('active');
+</script>
