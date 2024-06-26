@@ -1,9 +1,9 @@
 ---
-interface Props {
-	title: string;
-}
+interface Props {title: string}
 const { title } = Astro.props;
 
+import Sidebar from "@/sections/Sidebar.astro"
+import MainContenedor from "@/sections/MainContenedor.astro"
 // fonts
 // Supports weights 200-800
 import '@fontsource-variable/manrope';
@@ -19,9 +19,13 @@ import '@fontsource-variable/manrope';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		kcnjdsn
-		<slot />
+	<body class="bg-chill-950 text-xs text-chill-50 p-4">
+		<div class="grid grid-cols-[auto_1fr] gap-x-4 items-start fixed top-4 left-4 right-4">
+			<Sidebar />
+			<MainContenedor>
+				<slot />
+			</MainContenedor>
+		</div>
 	</body>
 </html>
 <style is:global>

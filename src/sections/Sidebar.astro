@@ -1,0 +1,25 @@
+---
+import LiSidebar from "@/components/LiSidebar.astro";
+import Home from "@/icons/Home.astro";
+import Estudios from "@/icons/Estudios.astro";
+import Portafolio from "@/icons/Portafolio.astro";
+import Contacto from "@/icons/Contacto.astro";
+---
+
+<ul class="flex flex-col gap-2 justify-center bg-chill-50/10 p-2 rounded-xl">
+    <LiSidebar titulo="inicio" url="/">
+        <Home slot="icon" class="w-6 h-6 fill-chill-50 stroke-chill-50" />
+    </LiSidebar>
+
+    <LiSidebar titulo="estudios" url="#estudios">
+        <Estudios slot="icon" class="w-6 h-6 fill-chill-50 stroke-chill-50" />
+    </LiSidebar>
+
+    <LiSidebar titulo="portafolio" url="#portafolio">
+        <Portafolio slot="icon" class="w-6 h-6 fill-chill-50 stroke-chill-50" />
+    </LiSidebar>
+
+    <LiSidebar titulo="contacto" url="#contacto">
+        <Contacto slot="icon" class="w-6 h-6 fill-chill-50 stroke-chill-50" />
+    </LiSidebar>
+</ul>
