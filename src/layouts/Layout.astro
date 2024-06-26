@@ -3,7 +3,6 @@ interface Props {title: string}
 const { title } = Astro.props;
 
 import Sidebar from "@/sections/Sidebar.astro"
-import MainContenedor from "@/sections/MainContenedor.astro"
 // fonts
 // Supports weights 200-800
 import '@fontsource-variable/manrope';
@@ -19,13 +18,14 @@ import '@fontsource-variable/manrope';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-chill-950 text-xs text-chill-50 p-4">
-		<div class="grid grid-cols-[auto_1fr] gap-x-4 items-start fixed top-4 left-4 right-4">
+	<body class="bg-chill-950 text-xs text-chill-50 p-4 relative">
+		<main class="main-container fixed top-2 left-2 right-2 bottom-2">
+			<div class="w-1/2 max-w-[350px] [aspect-ratio:1/1] blur-3xl bg-chill-600 border-[15px] border-chill-800 border-solid absolute bottom-8 left-1/2 -translate-x-1/2  rounded-full -z-10 circle circle-bottom"></div>
 			<Sidebar />
-			<MainContenedor>
+			<section class="section-container bg-chill-50/10 rounded-xl p-2 overflow-y-auto h-full scroll-smooth [grid-area:main]">
 				<slot />
-			</MainContenedor>
-		</div>
+			</section>
+		</main>
 	</body>
 </html>
 <style is:global>
@@ -35,8 +35,29 @@ import '@fontsource-variable/manrope';
 		border: 0;
 		box-sizing: border-box;
 	}
-
 	body{
 		font-family: 'Manrope Variable', sans-serif;
+	}
+	.main-container{
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: 'sidebar main';
+		gap: .5rem;
+		align-items: flex-start;
+	}
+	.section-container{
+        scrollbar-width: thin;
+        scrollbar-color: #5faab160 #304146;
+        grid-row: span 2;
+    }
+	.circle-bottom{
+		animation: latido 8s infinite alternate;
+	}
+
+	@keyframes latido {
+		100%{
+			scale: 1.4;
+		}
 	}
 </style>
