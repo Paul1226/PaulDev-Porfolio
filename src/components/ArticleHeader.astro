@@ -1,0 +1,16 @@
+---
+interface Props {
+    title: string
+    resumen: string
+}
+const { title, resumen } = Astro.props
+---
+<article class="flex items-center [align-self:stretch] gap-2 p-2 border-solid border-b-2 border-chill-900">
+    <figure>
+        <slot name="icon" />
+    </figure>
+    <div class="text">
+        <span class="text-chill-50/60 capitalize pb-1 block">{title}</span>
+        <p>{resumen}</p>
+    </div>
+</article>
