@@ -14,27 +14,45 @@
   },
   "experiencia": [
     {
-      "puesto": "Académia ConquerBlocks",
-      "empresa": "Desarrollador Full-Stack",
-      "inicio": "2023",
-      "fin": "Actual",
-      "descripcion": "Actualmente, profundizo mis conocimientos para convertirme en un Desarrollador Full-Stack capacitado, abordando proyectos de forma integral, desde el frontend con React o Angular, hasta el backend con Node.js o Django, brindando soluciones completas y de alta calidad."
+      "subtitulo": "Aplicación de Películas",
+      "proyecto": "Página de Películas",
+      "descripcion": "Creé una página web de películas que permite a los usuarios buscar y ver información sobre diferentes películas. Se integrará posteriormente una base de datos para el almacenamiento y gestión de datos de películas, mejorando la funcionalidad y la experiencia del usuario.",
+      "tecnologias": ["HTML", "CSS", "JavaScript", "API de películas"],
+      "link": "https://mispeliculas-1226.netlify.app/",
+      "inicio": "Marzo-2024",
+      "fin": "Actual"
     },
     {
-      "puesto": "Muebleria JyB",
-      "empresa": "Diseñador y creador de mobiliario",
-      "inicio": "2020",
-      "fin": "2023",
-      "descripcion": "Dentro de la empresa hice los planos de algunos de los mobiliarios que ellos ofrecían a sus clientes. En algunos de los planos incluía algunos renders para facilitar la visualización de los mismos."
+      "subtitulo": "Desarrollo de Sitios Completos",
+      "proyecto": "Sitios Web Completos",
+      "descripcion": "Desarrollé dos sitios web que incluyen funcionalidades avanzadas como sistemas de autenticación, manejo de formularios, y conexión a bases de datos. Utilicé tecnologías como React y Node.js para construir aplicaciones web robustas y escalables, proporcionando una experiencia de usuario eficiente y segura.",
+      "tecnologias": ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+      "inicio": "Enero-2024",
+      "fin": "Feb-2024"
+    },
+    {
+      "subtitulo": "Desarrollo Web Básico",
+      "proyecto": "Páginas Web en HTML, CSS y JavaScript",
+      "descripcion": "He creado más de 10 páginas web utilizando HTML, CSS y JavaScript, enfocándome en el diseño responsivo, la implementación de animaciones y la lógica de programación en JavaScript. Estos proyectos me han permitido profundizar mis conocimientos en el desarrollo frontend.",
+      "tecnologias": ["HTML", "CSS", "JavaScript"],
+      "inicio": "Sep-2023",
+      "fin": "Dic-2023"
     }
   ],
   "educacion": [
     {
       "institucion": "Academia ConquerBlocks",
-      "titulo": "Desarrollador Full-Stack",
+      "titulo": "Desarrollador Frontend",
       "inicio": "2023",
       "fin": "Actual",
-      "descripcion": "Actualmente, profundizo mis conocimientos para convertirme en un Desarrollador Full-Stack capacitado, abordando proyectos de forma integral, desde el frontend con React o Angular, hasta el backend con Node.js o Django, brindando soluciones completas y de alta calidad."
+      "descripcion": "Me especializo en el desarrollo frontend utilizando tecnologías como React y Angular para crear interfaces de usuario dinámicas y receptivas, proporcionando una experiencia de usuario de alta calidad."
+    },
+    {
+      "institucion": "Academia ConquerBlocks",
+      "titulo": "Desarrollador Backend",
+      "inicio": "2023",
+      "fin": "Actual",
+      "descripcion": "Desarrollo la lógica del servidor y la gestión de bases de datos con Node.js y Django, asegurando la eficiencia y seguridad en la manipulación de datos y en la comunicación con el frontend."
     }
   ],
   "habilidades": [
