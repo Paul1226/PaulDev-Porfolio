@@ -14,7 +14,7 @@ const { titulo, url } = Astro.props
 </li>
 <style>
     a.active{
-        @apply bg-chill-700 ;
+        @apply bg-chill-700 pointer-events-none;
 
         svg{
             @apply fill-chill-50 stroke-chill-50;
@@ -23,6 +23,12 @@ const { titulo, url } = Astro.props
 </style>
 
 <script>
-    const $primerLink:HTMLAnchorElement |null = document.querySelector('.link');
-    $primerLink?.classList.add('active');
+    const $links = document.querySelectorAll<HTMLAnchorElement>('.link');
+    const linkDefault = document.querySelector<HTMLAnchorElement>('.link')?.classList.add('active')
+    $links.forEach(link=>{
+        link.addEventListener('click', (e)=>{
+            $links.forEach(link => link.classList.remove('active'))
+            link.classList.add('active')
+        })
+    })
 </script>
