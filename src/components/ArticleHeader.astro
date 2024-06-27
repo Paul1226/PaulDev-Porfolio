@@ -5,7 +5,7 @@ interface Props {
 }
 const { title, resumen } = Astro.props
 ---
-<article class="flex items-center [align-self:stretch] gap-2 p-2 border-solid border-b-2 border-chill-900">
+<article class="flex items-center [align-self:stretch] gap-2 p-2 border-solid border-b-2 border-transparent group">
     <figure>
         <slot name="icon" />
     </figure>
@@ -14,3 +14,9 @@ const { title, resumen } = Astro.props
         <p>{resumen}</p>
     </div>
 </article>
+
+<style>
+    article:has( + article){
+        @apply border-chill-900;
+    }
+</style>
