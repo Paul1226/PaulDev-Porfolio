@@ -25,11 +25,12 @@ const { titulo, subtitulo, fecha, contenido, link } = Astro.props;
                 <time class="p-0 m-0 text-sm text-chill-50/30">{fecha}</time>
             </div>
         </div>
-        <div class="relative flex flex-col gap-2 pb-4 text-chill-50/60 md:col-span-3">{contenido}
+        <div class="relative flex flex-col gap-2 pb-4 text-chill-50/60 md:col-span-3 text-sm md:text-base">{contenido}
             {
                 link && (
                     <a
                         href={link}
+                        target="_blank"
                         role="link"
                         class="inline-flex w-max items-center text-sm font-medium text-chill-500 transition-colors duration-300 hover:text-chill-700"
                     >
