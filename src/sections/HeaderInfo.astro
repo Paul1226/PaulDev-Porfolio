@@ -11,7 +11,7 @@ const ubicacion = Object.keys(personal)[7];
 const cumpleanios = Object.keys(personal)[6];
 ---
 
-<header class="[grid-area:info]" id="inicio">
+<header class="md:order-2" id="inicio">
     <fieldset
         class="rounded-xl border-solid border-2 border-chill-900 w-full max-w-[280px] mx-auto md:min-w-[280px]"
     >
@@ -25,12 +25,12 @@ const cumpleanios = Object.keys(personal)[6];
         </legend>
 
         <header class="flex flex-col gap-1 py-4 items-center">
-            <h1 class="text-3xl font-bold text-chill-50 font-cinzel">
+            <h2 class="text-3xl font-bold text-chill-50 font-cinzel">
                 {infoPorfolio.personal.nombre}<span
                     class="bg-textlinear text-transparent bg-clip-text"
                     >{infoPorfolio.personal.apellido}</span
                 >
-            </h1>
+            </h2>
 
             <p class="p-2 rounded-lg bg-chill-700/10 w-max">
                 {infoPorfolio.personal.titulo}
@@ -120,10 +120,12 @@ const cumpleanios = Object.keys(personal)[6];
                 </ArticleHeader> -->
             </section>
             <a
-                class="mt-4 border-2 border-solid border-chill-900 py-2 px-3 rounded-full text-chill-50/50 block w-max mx-auto hover:text-chill-50 transition-all duration-300 link-cv"
+                class="mt-4 border-2 border-solid border-chill-900 py-2 px-3 rounded-full text-chill-50/50 block w-max mx-auto hover:text-chill-50 transition-all duration-300 link-cv pointer-events-none"
                 href="#"
-                rel="noopener noreferrer">Descargar CV</a
+                rel="noopener noreferrer"
             >
+                Descargar CV
+            </a>
         </main>
     </fieldset>
 </header>
