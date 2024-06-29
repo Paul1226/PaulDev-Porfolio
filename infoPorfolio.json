@@ -3,14 +3,14 @@
     "nombre": "Paul",
     "apellido": "Dev",
     "titulo": "Desarrollador Web",
-    "resumen": "Mi nombre es Paúl Esteban y aspiro al reconocimiento como PaulDev en el mundo de la programación, donde mi interés surgió al estudiar máquinas de control numérico computarizado (CNC) y diseño digital, llevándome a estudiar Desarrollo Full-Stack en la Academia ConquerBlocks para dominar frontend y backend de manera integral.",
+    "resumen": "Soy Paúl Esteban, conocido como PaulDev. Mi pasión por la tecnología comenzó con el CNC y diseño digital, llevándome a estudiar Desarrollo Full-Stack en ConquerBlocks para dominar el frontend y backend.",
     "email": "paulguachichullca@gmail.com",
     "celular": "+593 98 0958291",
     "cumpleaños": "2000-12-26",
     "ubicación": "Cuenca, Ecuador",
     "githubUrl": "https://github.com/Paul1226",
     "linkedinUrl": "https://www.linkedin.com/in/paul-guachichullca-2287602b1/",
-    "emailUrl": "mailto:paulguachichullca@gmail.com"
+    "emailUrl": "mailto:paulguachichullca023@gmail.com"
   },
   "experiencia": [
     {
@@ -41,14 +41,14 @@
   ],
   "educacion": [
     {
-      "institucion": "Academia ConquerBlocks",
+      "institucion": "Academia Conquer Blocks",
       "titulo": "Desarrollador Frontend",
       "inicio": "2023",
       "fin": "Actual",
       "descripcion": "Me especializo en el desarrollo frontend utilizando tecnologías como React y Angular para crear interfaces de usuario dinámicas y receptivas, proporcionando una experiencia de usuario de alta calidad."
     },
     {
-      "institucion": "Academia ConquerBlocks",
+      "institucion": "Academia Conquer Blocks",
       "titulo": "Desarrollador Backend",
       "inicio": "2023",
       "fin": "Actual",
