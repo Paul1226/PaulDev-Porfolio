@@ -24,7 +24,7 @@ import '@fontsource/cinzel-decorative/900.css';
 		<title>{title}</title>
 	</head>
 	<body class="bg-slate-950 text-xs text-chill-50 p-4 relative">
-		<main class="main-container fixed top-2 left-2 right-2 bottom-2">
+		<main class="main-container fixed top-2 left-2 right-2 bottom-2 w-full max-w-[1366px] mx-auto">
 			<Background />
 			<Sidebar />
 			<section class="section-container bg-chill-500/10 rounded-xl p-4 overflow-y-auto h-full scroll-smooth [grid-area:section]">
@@ -62,11 +62,4 @@ import '@fontsource/cinzel-decorative/900.css';
 		grid-template-areas: 'info' 'estudios' 'portafolio' 'contacto';
 		gap: 2rem;
     }
-
-	@media (min-width: 768px) {
-		.section-container{
-			grid-template-columns: 1fr auto;
-			grid-template-areas: 'estudios info' 'portafolio info' 'contacto info';
-		}
-	}
 </style>
