@@ -77,7 +77,7 @@
       ],
       "url": "https://mispeliculas-1226.netlify.app/",
       "repositorio": "https://github.com/Paul1226/MisPeliculas",
-      "imagen": "/public/proyecto-pelis.webp"
+      "imagen": "public/proyecto-pelis.webp"
     },
     {
       "nombre": "Coworking Space",
@@ -87,7 +87,7 @@
         "tailwind"
       ],
       "repositorio": "https://github.com/Paul1226/Coworking-Space",
-      "imagen": "/public/microsite01.webp"
+      "imagen": "https://raw.githubusercontent.com/Paul1226/PaulDev-Porfolio/main/public/microsite01.webp"
     }
   ]
 }
