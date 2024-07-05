@@ -68,26 +68,26 @@
   ],
   "proyectos": [
     {
-      "nombre": "Nombre del proyecto",
-      "descripcion": "Breve descripción del proyecto.",
+      "nombre": "Mis Películas",
+      "descripcion": "Una plataforma web que permite a los usuarios explorar una amplia variedad de películas, ver detalles como sinopsis, reparto y calificaciones. Utiliza tecnologías modernas para ofrecer una experiencia de usuario fluida y atractiva.",
       "tecnologias": [
-        "React",
-        "Node.js",
+        "astro",
+        "tailwind",
         "MongoDB"
       ],
-      "url": "https://proyecto.com",
-      "repositorio": "https://github.com/tunombre/proyecto"
+      "url": "https://mispeliculas-1226.netlify.app/",
+      "repositorio": "https://github.com/Paul1226/MisPeliculas",
+      "imagen": "/public/proyecto-pelis.webp"
     },
     {
-      "nombre": "Otro proyecto",
-      "descripcion": "Descripción de otro proyecto.",
+      "nombre": "Coworking Space",
+      "descripcion": "Este proyecto es una landing page diseñada para un espacio de coworking, creada para profundizar mis conocimientos en CSS. La página destaca las características del coworking, las tarifas de membresía y una galería de imágenes.",
       "tecnologias": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "astro",
+        "tailwind"
       ],
-      "url": "https://otroproyecto.com",
-      "repositorio": "https://github.com/tunombre/otroproyecto"
+      "repositorio": "https://github.com/Paul1226/Coworking-Space",
+      "imagen": "/public/microsite01.webp"
     }
   ]
 }
