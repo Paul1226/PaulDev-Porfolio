@@ -1,0 +1,137 @@
+---
+interface Props {
+    isEven: string;
+    urlImagen: string;
+    urlSitio?: string;
+    urlRepositorio?: string;
+    nombre: string;
+    descripcion: string;
+    tecnologias?: string[];
+}
+
+const {
+    isEven,
+    urlImagen,
+    urlSitio,
+    urlRepositorio,
+    nombre,
+    descripcion,
+    tecnologias,
+} = Astro.props;
+---
+
+<article class=`w-full flex flex-col gap-5 mt-6 md:flex-row bg-chill-950/30 max-w-[800px] p-4 rounded-lg group ${isEven}`>
+    <figure
+        class="w-full max-w-[400px] md:min-w-[300px] overflow-hidden rounded-lg bg-transparent transition-all duration-300 relative"
+    >
+        <img
+            class="w-full h-full object-cover group-hover:scale-95 transition-all duration-300 rounded-lg opacity-100 group-hover:opacity-50 group-hover:brightness-50"
+            src={urlImagen}
+            alt=`Imagen de ${nombre}`
+        />
+        {
+            (urlSitio || urlRepositorio) && (
+                <div class="links absolute inset-0 hidden flex-col gap-y-4 justify-center items-center group-hover:inline-flex">
+                    {urlSitio && (
+                        <a
+                            class="flex gap-x-2 items-center bg-slate-500 py-1 px-2 rounded-lg border-2 border-solid border-transparent duration-300 hover:border-slate-800"
+                            href={urlSitio}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <svg
+                                class="w-4 fill-chill-50"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M7.896 16.104a1.5 1.5 0 1 1 2.121-2.121c1.326 1.326 3.64 1.327 4.966 0l4.989-4.989c1.369-1.369 1.369-3.597 0-4.966s-3.597-1.369-4.966 0a1.5 1.5 0 1 1-2.121-2.121 6.518 6.518 0 0 1 9.208 0 6.518 6.518 0 0 1 0 9.208l-4.989 4.989c-1.27 1.27-2.937 1.904-4.604 1.904s-3.335-.635-4.604-1.904Zm-1.384 7.893a6.494 6.494 0 0 0 4.604-1.904 1.5 1.5 0 1 0-2.121-2.121 3.515 3.515 0 0 1-4.966 0 3.516 3.516 0 0 1 0-4.966l4.961-4.961a3.514 3.514 0 0 1 4.966 0 1.5 1.5 0 1 0 2.121-2.121 6.518 6.518 0 0 0-9.208 0l-4.962 4.961a6.518 6.518 0 0 0 0 9.208 6.49 6.49 0 0 0 4.604 1.904Z" />
+                            </svg>
+                            <span>Sitio</span>
+                        </a>
+                    )}
+                    {urlRepositorio && (
+                        <a
+                            class="flex gap-x-2 items-center bg-slate-600 border-2 border-transparent border-solid p-1 rounded-lg duration-300 hover:border-slate-800"
+                            href={urlRepositorio}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <svg
+                                class="w-5"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                stroke-width="2.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                />
+                                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                            </svg>
+                            <span>Repositorio</span>
+                        </a>
+                    )}
+                </div>
+            )
+        }
+    </figure>
+    <div class="flex flex-col gap-y-4">
+        <h2 class="font-semibold text-xl text-chill-50">{nombre}</h2>
+        <p class="p-0 m-0 text-sm text-chill-50/60 md:text-base text-pretty">{descripcion}</p>
+        {
+            tecnologias && (
+                <div class="flex gap-2 items-center flex-wrap font-bold">
+                    {
+                        tecnologias.map(tecn => {
+                            if(tecn === 'astro'){
+                                return <span class="text-xs p-1 rounded-md bg-orange-700 capitalize">astro</span>
+                            }else if(tecn === 'tailwind'){
+                                return <span class="text-xs p-1 rounded-md bg-[#168583] capitalize">tailwind</span>
+                            }else if(tecn === 'MongoDB'){
+                                return <span class="text-xs p-1 rounded-md bg-[#008000] capitalize">mongoDB</span>
+                            }else if(tecn === 'HTML'){
+                                return <span class="text-xs p-1 rounded-md bg-[#E96228] uppercase">html</span>
+                            }else if(tecn === 'CSS'){
+                                return <span class="text-xs p-1 rounded-md bg-[#2862E9] uppercase">css</span>
+                            }else if(tecn === 'JavaScript'){
+                                return <span class="text-xs p-1 rounded-md bg-[#a0922c] capitalize">javaScript</span>
+                            }
+                        })
+                    }
+                </div>
+            )
+        }
+    </div>
+</article>
+
+<style>
+    .links {
+        a {
+            animation: entrada 0.3s ease-in-out both;
+            @apply text-sm;
+        }
+        a:last-of-type {
+            animation-delay: 0.2s;
+        }
+    }
+    @keyframes entrada {
+        0% {
+            scale: 0;
+        }
+        100% {
+            scale: 1;
+        }
+    }
+    article.derecha{
+        @apply lg:ml-[10%];
+    }
+    article.izquierda {
+        align-self: flex-end;
+        @apply lg:mr-[10%];
+    }
+</style>
