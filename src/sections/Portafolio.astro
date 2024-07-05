@@ -1,0 +1,29 @@
+---
+import infoPorfolio from "../../infoPorfolio.json";
+import CardProyectos from "@/components/CardProyectos.astro";
+---
+
+<section id="portafolio">
+    <h2 class="text-2xl font-bold text-chill-50 font-cinzel">Portafolio</h2>
+    <section class="flex flex-col gap-4">
+        {
+            infoPorfolio.proyectos.map((proyecto, index) => {
+                const isEven = index % 2 === 0 ? 'derecha' : 'izquierda';
+                    return (
+                        <CardProyectos
+                            isEven={isEven}
+                            urlImagen={proyecto.imagen}
+                            urlSitio={proyecto.url}
+                            urlRepositorio={proyecto.repositorio}
+                            nombre={proyecto.nombre}
+                            descripcion={proyecto.descripcion}
+                            tecnologias={proyecto.tecnologias}
+                        />
+                    );
+                },
+            )
+        }
+    </section>
+    <h2 class="text-2xl font-bold text-chill-50 font-cinzel my-6">Skills</h2>
+    <section></section>
+</section>
