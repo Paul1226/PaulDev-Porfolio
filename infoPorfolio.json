@@ -84,7 +84,8 @@
       "descripcion": "Este proyecto es una landing page diseñada para un espacio de coworking, creada para profundizar mis conocimientos en CSS. La página destaca las características del coworking, las tarifas de membresía y una galería de imágenes.",
       "tecnologias": [
         "astro",
-        "tailwind"
+        "tailwind",
+        "javaScript"
       ],
       "repositorio": "https://github.com/Paul1226/Coworking-Space",
       "imagen": "https://raw.githubusercontent.com/Paul1226/PaulDev-Porfolio/main/public/microsite01.webp"
