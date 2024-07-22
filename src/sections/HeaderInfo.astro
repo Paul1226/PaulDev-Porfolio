@@ -3,7 +3,6 @@ import Svg from "@/components/Svg.astro";
 import LiHeader from "@/components/LiHeader.astro";
 import ArticleHeader from "@/components/ArticleHeader.astro";
 import infoPorfolio from "../../infoPorfolio.json";
-import { globalAgent } from "http";
 
 const personal = infoPorfolio.personal;
 const celular = Object.keys(personal)[5];
@@ -152,15 +151,7 @@ const downloadAttr = isMobile ? "download" : "";
                     </Svg>
                 </ArticleHeader>
             </section>
-            <!-- <a
-                class="mt-4 border-2 border-solid border-chill-900 py-2 px-3 rounded-full text-chill-50/50 block w-max mx-auto hover:text-chill-50 transition-all duration-300 link-cv"
-                href="/DownloadCv"
-                rel="noopener noreferrer"
-                target="_blank"
-                download="./PaulDev-Portafolio.pdf"
-            >
-                Descargar CV
-            </a> -->
+
             <a
                 class="mt-4 border-2 border-solid border-chill-900 py-2 px-3 rounded-full text-chill-50/50 block w-max mx-auto hover:text-chill-50 transition-all duration-300 link-cv"
                 href={linkHref}
