@@ -20,6 +20,9 @@ importers:
       '@fontsource-variable/manrope':
         specifier: ^5.0.20
         version: 5.0.20
+      '@fontsource-variable/raleway':
+        specifier: ^5.0.20
+        version: 5.0.20
       '@fontsource/cinzel-decorative':
         specifier: ^5.0.19
         version: 5.0.19
@@ -501,6 +504,9 @@ packages:
 
   '@fontsource-variable/manrope@5.0.20':
     resolution: {integrity: sha512-LKL0aM0DxYj8i/zUTb5Nru0mS3YoezPZaeWY7aIxEKVX1xVBLpPHlFq0NoK2iUXhL6HoD0XMYwc6KVa8I/ayKg==}
+
+  '@fontsource-variable/raleway@5.0.20':
+    resolution: {integrity: sha512-KXXL81z1GexSxIGD78DnuYGPixRGrUTP0F5uzLIB+0ugPYEv1UW+s8d/NtsCAjYR1pfuN0gXNBAzwwFxMqLZbA==}
 
   '@fontsource/cinzel-decorative@5.0.19':
     resolution: {integrity: sha512-FK/ECHd/1cupKAc3H6TljQeq5SP1wRwp669m4g9cr2h6YkxbMNYqRivhwjsYGMylIk8NVWaNAAdGh2nBj2AkQA==}
@@ -2893,6 +2899,8 @@ snapshots:
     optional: true
 
   '@fontsource-variable/manrope@5.0.20': {}
+
+  '@fontsource-variable/raleway@5.0.20': {}
 
   '@fontsource/cinzel-decorative@5.0.19': {}
 
