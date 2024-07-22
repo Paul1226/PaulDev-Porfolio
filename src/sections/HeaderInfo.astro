@@ -3,19 +3,28 @@ import Svg from "@/components/Svg.astro";
 import LiHeader from "@/components/LiHeader.astro";
 import ArticleHeader from "@/components/ArticleHeader.astro";
 import infoPorfolio from "../../infoPorfolio.json";
+import { globalAgent } from "http";
 
 const personal = infoPorfolio.personal;
 const celular = Object.keys(personal)[5];
 const email = Object.keys(personal)[4];
 const ubicacion = Object.keys(personal)[7];
 const cumpleanios = Object.keys(personal)[6];
+
+const downloadLink = "./PaulDev-Portafolio.pdf";
+const viewLink = "/DownloadCv";
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const linkHref = isMobile ? downloadLink : viewLink;
+const downloadAttr = isMobile ? "download" : "";
 ---
 
 <header class="md:order-2" id="inicio">
     <fieldset
         class="rounded-xl border-solid border-2 border-chill-900 w-full max-w-[280px] mx-auto md:min-w-[280px]"
     >
-        <legend class="w-3/4 max-w-[150px] [aspect-ratio:1/1] mx-auto bg-chillinear rounded-lg overflow-hidden [box-shadow:0px_0px_10px_#00000020]">
+        <legend
+            class="w-3/4 max-w-[150px] [aspect-ratio:1/1] mx-auto bg-chillinear rounded-lg overflow-hidden [box-shadow:0px_0px_10px_#00000020]"
+        >
             <img
                 class="object-cover rounded-xl mx-auto"
                 src="https://raw.githubusercontent.com/Paul1226/PaulDev-Porfolio/main/public/perfil.webp"
@@ -97,55 +106,88 @@ const cumpleanios = Object.keys(personal)[6];
         </header>
 
         <main class="px-4 pb-4">
-            <section class="flex flex-col gap-1 items-center [align-self:stretch] bg-red-90 rounded-lg">
-                <ArticleHeader title={celular} resumen={infoPorfolio.personal.celular}>
-                    <Svg class="w-7 h-7 stroke-chill-50/50 fill-transparent transition-colors duration-300 group-hover:fill-chill-50/50" slot="icon" stroke-width="30">
-                        <path d="M192 15h128c50.532 0 91.667 41.135 91.667 91.667v298.666C411.667 455.865 370.532 497 320 497H192c-50.532 0-91.667-41.135-91.667-91.667V106.667C100.333 56.135 141.468 15 192 15Zm42.667 448h42.666c20.061 0 36.334-16.273 36.334-36.333 0-20.061-16.273-36.334-36.334-36.334h-42.666c-20.061 0-36.334 16.273-36.334 36.334 0 20.06 16.273 36.333 36.334 36.333Z"/>
+            <section
+                class="flex flex-col gap-1 items-center [align-self:stretch] bg-red-90 rounded-lg"
+            >
+                <ArticleHeader
+                    title={celular}
+                    resumen={infoPorfolio.personal.celular}
+                >
+                    <Svg
+                        class="w-7 h-7 stroke-chill-50/50 fill-transparent transition-colors duration-300 group-hover:fill-chill-50/50"
+                        slot="icon"
+                        stroke-width="30"
+                    >
+                        <path
+                            d="M192 15h128c50.532 0 91.667 41.135 91.667 91.667v298.666C411.667 455.865 370.532 497 320 497H192c-50.532 0-91.667-41.135-91.667-91.667V106.667C100.333 56.135 141.468 15 192 15Zm42.667 448h42.666c20.061 0 36.334-16.273 36.334-36.333 0-20.061-16.273-36.334-36.334-36.334h-42.666c-20.061 0-36.334 16.273-36.334 36.334 0 20.06 16.273 36.333 36.334 36.333Z"
+                        ></path>
                     </Svg>
                 </ArticleHeader>
-                <ArticleHeader title={ubicacion} resumen={infoPorfolio.personal.ubicación}>
-                    <Svg class="w-7 h-7 stroke-chill-50/50 fill-transparent transition-colors duration-300 group-hover:fill-chill-50/50" slot="icon" stroke-width="30">
-                        <path d="m493.942 363.134-.006.004-210.368 126.229a53.5 53.5 0 0 1-27.546 7.654 53.444 53.444 0 0 1-27.536-7.647l-.012-.008L18.071 363.141l-.007-.004A6.325 6.325 0 0 1 15 357.674a6.305 6.305 0 0 1 3.121-5.412l.009-.005.008-.005 93.382-54.664 51.941 50.775c24.76 24.23 57.699 37.581 92.539 37.581 34.844 0 67.758-13.353 92.534-37.576l.003-.002 51.932-50.798 93.379 54.654.007.004a6.394 6.394 0 0 1 3.146 5.448 6.326 6.326 0 0 1-3.059 5.46ZM256 15c35.918 0 69.604 13.952 94.968 39.336 25.401 25.42 39.366 59.07 39.366 94.976 0 35.885-13.949 69.551-39.305 94.937l-53.313 52.162-.003.003c-11.445 11.189-26.514 16.842-41.713 16.842-15.199 0-30.27-5.654-41.715-16.844l-.001-.001-53.164-51.992c-52.485-52.547-52.444-137.748-.113-190.08C186.396 28.952 220.084 15 256 15Zm-79 134.12c0 43.634 35.367 79 79 79 43.634 0 79-35.366 79-79s-35.366-79-79-79c-43.633 0-79 35.366-79 79Z"/>
+                <ArticleHeader
+                    title={ubicacion}
+                    resumen={infoPorfolio.personal.ubicación}
+                >
+                    <Svg
+                        class="w-7 h-7 stroke-chill-50/50 fill-transparent transition-colors duration-300 group-hover:fill-chill-50/50"
+                        slot="icon"
+                        stroke-width="30"
+                    >
+                        <path
+                            d="m493.942 363.134-.006.004-210.368 126.229a53.5 53.5 0 0 1-27.546 7.654 53.444 53.444 0 0 1-27.536-7.647l-.012-.008L18.071 363.141l-.007-.004A6.325 6.325 0 0 1 15 357.674a6.305 6.305 0 0 1 3.121-5.412l.009-.005.008-.005 93.382-54.664 51.941 50.775c24.76 24.23 57.699 37.581 92.539 37.581 34.844 0 67.758-13.353 92.534-37.576l.003-.002 51.932-50.798 93.379 54.654.007.004a6.394 6.394 0 0 1 3.146 5.448 6.326 6.326 0 0 1-3.059 5.46ZM256 15c35.918 0 69.604 13.952 94.968 39.336 25.401 25.42 39.366 59.07 39.366 94.976 0 35.885-13.949 69.551-39.305 94.937l-53.313 52.162-.003.003c-11.445 11.189-26.514 16.842-41.713 16.842-15.199 0-30.27-5.654-41.715-16.844l-.001-.001-53.164-51.992c-52.485-52.547-52.444-137.748-.113-190.08C186.396 28.952 220.084 15 256 15Zm-79 134.12c0 43.634 35.367 79 79 79 43.634 0 79-35.366 79-79s-35.366-79-79-79c-43.633 0-79 35.366-79 79Z"
+                        ></path>
                     </Svg>
                 </ArticleHeader>
-                <ArticleHeader title={cumpleanios} resumen={infoPorfolio.personal.cumpleaños}>
-                    <Svg class="w-7 h-7 stroke-chill-50/50 fill-transparent transition-colors duration-300 group-hover:fill-chill-50/50" slot="icon" stroke-width="30">
-                        <path d="m17.665 451.281-.002.004c-5.224 12.401-2.468 26.485 7.033 35.995v.001m-7.03-36L66.56 508.16c-6.059 2.539-12.395 3.797-18.667 3.797-12.416 0-24.597-4.885-33.792-14.058l10.607-10.607-.011-.011m-7.032-36L89.82 279.865l142.315 142.316-171.372 72.144-.003.002m-43.095-43.046 43.095 43.046m-36.063-7.046c6.363 6.348 14.726 9.676 23.196 9.676 4.258 0 8.624-.853 12.867-2.63m-36.063-7.046 36.063 7.046m136.177-317.478.008.008 138.219 138.219.021.021c10.054 10.054 14.427 24.387 11.694 38.374a42.551 42.551 0 0 1-25.299 31.105l-17.112 7.202-184.182-184.182 7.204-17.116v-.002c5.524-13.131 17.136-22.563 31.112-25.316 13.947-2.731 28.291 1.628 38.335 11.687Zm150.717-80.438c-1.237 19.201-8.568 38.234-22.605 56.739l-.007-.004a6.29 6.29 0 0 1-5.042 2.499 6.264 6.264 0 0 1-3.823-1.283 6.328 6.328 0 0 1-1.211-8.866l.005-.006.005-.007c11.755-15.521 18.913-32.326 20.036-49.891v-.003c2.714-42.557-27.818-67.818-29.522-69.215l-.012-.01-.013-.01c-2.747-2.243-3.121-6.269-.995-8.914 2.216-2.752 6.079-3.161 8.758-1.109 2.335 1.903 37.539 31.267 34.426 80.08Zm148.187 177.283a6.319 6.319 0 0 1-.993 8.411l-.519.364c-1.159.815-2.423 1.176-3.641 1.176-2.055 0-3.937-.926-5.141-2.593l-.133-.183-.138-.18c-1.08-1.404-14.194-18.377-37.276-18.377-10.335 0-20.045 3.012-28.294 9.23l-.007.005-.006.006a6.33 6.33 0 0 1-8.876-1.234c-2.099-2.789-1.528-6.762 1.234-8.842l.007-.005.006-.005c10.181-7.682 22.539-11.8 35.936-11.8 24.258 0 41.777 15.428 47.837 24.022l.004.005ZM480 49.021c-9.38 0-17-7.62-17-17 0-9.38 7.62-17 17-17 9.38 0 17 7.62 17 17 0 9.38-7.62 17-17 17Zm-42.667 106.667c-9.379 0-17-7.62-17-17 0-9.38 7.621-17 17-17 9.38 0 17 7.62 17 17 0 9.38-7.62 17-17 17ZM202.667 70.333c-9.38 0-17-7.62-17-17 0-9.38 7.62-17 17-17 9.379 0 17 7.62 17 17 0 9.38-7.621 17-17 17Zm256 341.334c-9.38 0-17-7.621-17-17 0-9.38 7.62-17 17-17 9.379 0 17 7.62 17 17 0 9.379-7.621 17-17 17Zm-405.334-320c-9.38 0-17-7.62-17-17 0-9.38 7.62-17 17-17 9.38 0 17 7.62 17 17 0 9.38-7.62 17-17 17ZM352 497c-9.38 0-17-7.62-17-17 0-9.38 7.62-17 17-17 9.38 0 17 7.62 17 17 0 9.38-7.62 17-17 17Z"/>
+                <ArticleHeader
+                    title={cumpleanios}
+                    resumen={infoPorfolio.personal.cumpleaños}
+                >
+                    <Svg
+                        class="w-7 h-7 stroke-chill-50/50 fill-transparent transition-colors duration-300 group-hover:fill-chill-50/50"
+                        slot="icon"
+                        stroke-width="30"
+                    >
+                        <path
+                            d="m17.665 451.281-.002.004c-5.224 12.401-2.468 26.485 7.033 35.995v.001m-7.03-36L66.56 508.16c-6.059 2.539-12.395 3.797-18.667 3.797-12.416 0-24.597-4.885-33.792-14.058l10.607-10.607-.011-.011m-7.032-36L89.82 279.865l142.315 142.316-171.372 72.144-.003.002m-43.095-43.046 43.095 43.046m-36.063-7.046c6.363 6.348 14.726 9.676 23.196 9.676 4.258 0 8.624-.853 12.867-2.63m-36.063-7.046 36.063 7.046m136.177-317.478.008.008 138.219 138.219.021.021c10.054 10.054 14.427 24.387 11.694 38.374a42.551 42.551 0 0 1-25.299 31.105l-17.112 7.202-184.182-184.182 7.204-17.116v-.002c5.524-13.131 17.136-22.563 31.112-25.316 13.947-2.731 28.291 1.628 38.335 11.687Zm150.717-80.438c-1.237 19.201-8.568 38.234-22.605 56.739l-.007-.004a6.29 6.29 0 0 1-5.042 2.499 6.264 6.264 0 0 1-3.823-1.283 6.328 6.328 0 0 1-1.211-8.866l.005-.006.005-.007c11.755-15.521 18.913-32.326 20.036-49.891v-.003c2.714-42.557-27.818-67.818-29.522-69.215l-.012-.01-.013-.01c-2.747-2.243-3.121-6.269-.995-8.914 2.216-2.752 6.079-3.161 8.758-1.109 2.335 1.903 37.539 31.267 34.426 80.08Zm148.187 177.283a6.319 6.319 0 0 1-.993 8.411l-.519.364c-1.159.815-2.423 1.176-3.641 1.176-2.055 0-3.937-.926-5.141-2.593l-.133-.183-.138-.18c-1.08-1.404-14.194-18.377-37.276-18.377-10.335 0-20.045 3.012-28.294 9.23l-.007.005-.006.006a6.33 6.33 0 0 1-8.876-1.234c-2.099-2.789-1.528-6.762 1.234-8.842l.007-.005.006-.005c10.181-7.682 22.539-11.8 35.936-11.8 24.258 0 41.777 15.428 47.837 24.022l.004.005ZM480 49.021c-9.38 0-17-7.62-17-17 0-9.38 7.62-17 17-17 9.38 0 17 7.62 17 17 0 9.38-7.62 17-17 17Zm-42.667 106.667c-9.379 0-17-7.62-17-17 0-9.38 7.621-17 17-17 9.38 0 17 7.62 17 17 0 9.38-7.62 17-17 17ZM202.667 70.333c-9.38 0-17-7.62-17-17 0-9.38 7.62-17 17-17 9.379 0 17 7.62 17 17 0 9.38-7.621 17-17 17Zm256 341.334c-9.38 0-17-7.621-17-17 0-9.38 7.62-17 17-17 9.379 0 17 7.62 17 17 0 9.379-7.621 17-17 17Zm-405.334-320c-9.38 0-17-7.62-17-17 0-9.38 7.62-17 17-17 9.38 0 17 7.62 17 17 0 9.38-7.62 17-17 17ZM352 497c-9.38 0-17-7.62-17-17 0-9.38 7.62-17 17-17 9.38 0 17 7.62 17 17 0 9.38-7.62 17-17 17Z"
+                        ></path>
                     </Svg>
                 </ArticleHeader>
-                <!-- <ArticleHeader title={email} resumen={infoPorfolio.personal.email}>
-                    <Svg class="w-7 h-7 stroke-chill-50/50" slot="icon" stroke-width="30">
-                        <path d="M497 153.461 342.041 308.42l-.006.007-.007.006a121.814 121.814 0 0 1-172.056 0l-.007-.006-.006-.007L15 153.461v230.53a91.795 91.795 0 0 0 91.685 91.676h298.63A91.794 91.794 0 0 0 497 384v-.018m0-230.521v230.521m0-230.521v230.521m0-230.521v230.521"/><path d="M476.686 70.997 290.684 257.02a49.149 49.149 0 0 1-69.36.008l-.008-.008L35.314 70.997a91.368 91.368 0 0 1 71.374-34.664h298.624a91.368 91.368 0 0 1 71.374 34.664Z"/>
-                    </Svg>
-                </ArticleHeader> -->
             </section>
-            <a
+            <!-- <a
                 class="mt-4 border-2 border-solid border-chill-900 py-2 px-3 rounded-full text-chill-50/50 block w-max mx-auto hover:text-chill-50 transition-all duration-300 link-cv"
                 href="/DownloadCv"
                 rel="noopener noreferrer"
                 target="_blank"
+                download="./PaulDev-Portafolio.pdf"
             >
                 Descargar CV
-            </a>
+            </a> -->
+            <a
+                class="mt-4 border-2 border-solid border-chill-900 py-2 px-3 rounded-full text-chill-50/50 block w-max mx-auto hover:text-chill-50 transition-all duration-300 link-cv"
+                href={linkHref}
+                rel="noopener noreferrer"
+                target="_blank"
+                {...isMobile && { download: "Curriculum_PaulDev.pdf" }}
+                >Descargar CV</a
+            >
         </main>
     </fieldset>
 </header>
 
 <style>
-    .link-cv:hover{
-        box-shadow: 
+    .link-cv:hover {
+        box-shadow:
             0 0 2px #164e63,
             0 0 4px #164e63,
             0 0 6px #164e63,
             0 0 12px #164e63;
     }
-    legend img{
+    legend img {
         scale: 0;
         animation: aparicion 1.3s ease-in-out both;
     }
 
     @keyframes aparicion {
-        100%{
+        100% {
             scale: 1;
         }
     }
