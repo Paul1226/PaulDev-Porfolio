@@ -34,6 +34,9 @@ Aquí iré incluyendo las actividades o cambios que voy realizando en el portafo
 - [_] Mejorar las skills por cada proyecto ya sea con svgs o cambios de backgrounds.
 - [_] Completar sección de skills despues de proyectos.
 - [_] Desarrollar la sección de contacto.
+- [_] Mejorar la informacion de la seccion de proyectos del cv.
+- [_] Crear la seccion de skills.
+- [_] Crear la seccion de contacto.
 
 ---
 
