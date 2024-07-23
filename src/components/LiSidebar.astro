@@ -24,6 +24,9 @@ const { titulo, url } = Astro.props
 
 <script>
     const $links = document.querySelectorAll<HTMLAnchorElement>('.link');
+    const primerLink = $links[0];
+
+    primerLink.classList.add('active')
     $links.forEach(link=>{
         link.addEventListener('click', ()=>{
             $links.forEach(link => link.classList.remove('active'))
